@@ -1,0 +1,86 @@
+/* Reset des marges et des paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 135, 180, 0.544)
+}
+
+/* Style du fond bleu de l'arrière-plan */
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28.57vh; /* Correspond à 2/7 de la hauteur de l'écran */
+    background-color: blue;
+}
+
+/* Style des carrés gris représentant les bases des joueurs */
+#left-base,
+#right-base {
+    position: absolute;
+    width: 100px; /* Largeur de 100px */
+    height: 100px; /* Hauteur de 100px */
+    background-color: gray;
+}
+
+#left-base {
+    left: 0;
+    bottom: calc(2/7 * 100vh); /* Aligner à la hauteur du sol */
+}
+
+#sol {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(2/7 * 100vh); /* Correspond à 2/7 de la hauteur de la fenêtre */
+    background-color: green; /* Couleur verte */
+}
+
+#right-base {
+    right: 0;
+    bottom: calc(2/7 * 100vh); /* Aligner à la hauteur du sol */
+}
+
+/* Styles pour les zones de minerai d'or */
+.gold-ore {
+    position: absolute;
+    width: 150px; /* Largeur de la zone de minerai d'or ajustée */
+    background-color: rgb(129, 52, 0); /* Couleur de la zone de minerai d'or */
+    bottom: calc(2/7 * 100vh); /* Aligner à la hauteur du sol */
+  }
+  
+  #gold-ore-left {
+    left: 130px; /* Positionner devant la base gauche */
+  }
+  
+  #gold-ore-right {
+    right: 130px; /* Positionner devant la base droite */
+  }
+  
+  /* Styles pour les lignes de blocs d'or */
+  .gold-ore-line {
+    display: grid;
+    grid-template-columns: repeat(5, 10px); /* 5 colonnes de blocs d'or de 10px */
+    gap: 25px; /* Espacement de 10 pixels entre les blocs d'or */
+  }
+  
+  /* Styles pour les blocs jaunes représentant de l'or */
+  .gold-block {
+    width: 10px; /* Largeur de chaque bloc d'or */
+    height: 10px; /* Hauteur de chaque bloc d'or */
+    background-color: gold; /* Couleur jaune */
+  }
+  
+  #gold-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+
