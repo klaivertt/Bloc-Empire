@@ -16,7 +16,13 @@ html, body {
 }
 
 /* Style des carrés gris représentant les bases des joueurs */
-#left-base,
+#left-base{
+  position: absolute;
+  width: 100px; /* Largeur de 100px */
+  height: 100px; /* Hauteur de 100px */
+  background-color: rgba(103, 51, 105, 0.479);
+}
+
 #right-base {
     position: absolute;
     width: 100px; /* Largeur de 100px */
@@ -43,34 +49,32 @@ html, body {
 }
 
 /* Styles pour les zones de minerai d'or */
-.gold-ore {
-    position: absolute;
-    width: 150px; /* Largeur de la zone de minerai d'or ajustée */
-    background-color: rgb(129, 52, 0); /* Couleur de la zone de minerai d'or */
-    bottom: calc(2/7 * 100vh); /* Aligner à la hauteur du sol */
-  }
+
   
-  #gold-ore-left {
-    left: 130px; /* Positionner devant la base gauche */
-  }
+/* Styles pour les zones de minerai d'or */
+.gold-container {
+  position: absolute;
+  bottom: calc(2/7 * 100vh); /* Positionner les conteneurs au niveau du sol */
+  width: calc(50% - 130px); /* Ajuster la largeur pour éviter les collisions avec les bases */
+  height: 10px; /* Hauteur des conteneurs de blocs d'or */
+  display: flex;
+  align-items: center;
+}
+
+#gold-container-left {
+  left: 130px; /* Positionner devant la base gauche */
+  flex-direction: row; /* Aligner les blocs d'or horizontalement */
+  justify-content: flex-start; /* Aligner les blocs d'or à gauche */
+}
+
+#gold-container-right {
+  right: 130px; /* Positionner devant la base droite */
+  flex-direction: row; /* Aligner les blocs d'or horizontalement en sens inverse */
+  justify-content: flex-end; /* Aligner les blocs d'or à droite */
+}
   
-  #gold-ore-right {
-    right: 130px; /* Positionner devant la base droite */
-  }
+
   
-  /* Styles pour les lignes de blocs d'or */
-  .gold-ore-line {
-    display: grid;
-    grid-template-columns: repeat(5, 10px); /* 5 colonnes de blocs d'or de 10px */
-    gap: 25px; /* Espacement de 10 pixels entre les blocs d'or */
-  }
-  
-  /* Styles pour les blocs jaunes représentant de l'or */
-  .gold-block {
-    width: 10px; /* Largeur de chaque bloc d'or */
-    height: 10px; /* Hauteur de chaque bloc d'or */
-    background-color: gold; /* Couleur jaune */
-  }
   
   #gold-counter {
     position: absolute;
@@ -84,3 +88,6 @@ html, body {
   }
   
 
+  .transparent {
+    opacity: 0;
+  }
